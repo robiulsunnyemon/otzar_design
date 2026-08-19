@@ -177,10 +177,18 @@ export default function AccessLockGate({ onUnlock }: Props) {
           </button>
         </form>
 
-        {/* Footer Note */}
-        <p className="mt-6 font-mono text-[9px] text-center" style={{ color: '#4B5563', fontFamily: "'JetBrains Mono', monospace" }}>
-          AUTHORIZED PERSONNEL ONLY · PIN: 20429610
-        </p>
+        {/* Footer Note & Developer Credits */}
+        <div className="mt-6 flex flex-col items-center gap-1.5">
+          <p className="font-mono text-[9px] text-center" style={{ color: '#4B5563', fontFamily: "'JetBrains Mono', monospace" }}>
+            AUTHORIZED PERSONNEL ONLY
+          </p>
+          <p className="font-mono text-[10px] text-center flex items-center gap-1.5" style={{ color: '#8B929E', fontFamily: "'JetBrains Mono', monospace" }}>
+            <span>Developer:</span>
+            <a href="mailto:robiulsunyemon@gmail.com" className="transition-colors hover:text-[#D4AF37] underline underline-offset-2" style={{ color: '#D4AF37' }}>
+              robiulsunyemon@gmail.com
+            </a>
+          </p>
+        </div>
       </div>
     </div>
   )
