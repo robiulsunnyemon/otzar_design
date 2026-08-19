@@ -2,6 +2,7 @@ import { useState } from 'react'
 import type { ScreenId } from './types'
 import StatusBar from './components/StatusBar'
 import BottomNav from './components/BottomNav'
+import AccessLockGate from './components/AccessLockGate'
 import SplashScreen from './screens/SplashScreen'
 import OnboardingScreen from './screens/OnboardingScreen'
 import PinScreen from './screens/PinScreen'
@@ -33,9 +34,14 @@ const allScreens: ScreenId[] = [
 ]
 
 export default function App() {
+  const [unlocked, setUnlocked] = useState(() => sessionStorage.getItem('otzar_unlocked') === 'true')
   const [screen, setScreen] = useState<ScreenId>('splash')
   const [navOpen, setNavOpen] = useState(false)
   const [viewMode, setViewMode] = useState<'simulator' | 'grid'>('grid')
+
+  if (!unlocked) {
+    return <AccessLockGate onUnlock={() => setUnlocked(true)} />
+  }
 
   const navigate = (s: ScreenId) => { setScreen(s); setNavOpen(false) }
   const showStatusBar = !['splash', 'scanner', 'processing'].includes(screen)
@@ -92,6 +98,23 @@ export default function App() {
             🎛️ ALL SCREENS GRID (SHOWCASE)
           </button>
         </div>
+
+        {/* Lock Gate Action Button */}
+        <button
+          onClick={() => {
+            sessionStorage.removeItem('otzar_unlocked')
+            setUnlocked(false)
+          }}
+          className="px-3 py-2 rounded-xl font-mono text-[10px] font-semibold transition-all hover:bg-[#FF3B30] hover:text-white flex items-center gap-1.5"
+          style={{
+            fontFamily: "'JetBrains Mono', monospace",
+            background: '#181C24',
+            color: '#8B929E',
+            border: '1px solid rgba(212,175,55,0.2)',
+          }}
+        >
+          <span>🔒</span> LOCK VAULT
+        </button>
 
         {/* Screen selector for Simulator Mode */}
         {viewMode === 'simulator' && (
