@@ -165,7 +165,7 @@ export default function App() {
         <div
           className="relative overflow-hidden w-full max-w-[390px] flex flex-col"
           style={{
-            height: screen === 'dashboard' ? 'min(1000px, calc(100vh - 140px))' : screen === 'profile' ? 'min(1300px, calc(100vh - 140px))' : 'min(844px, calc(100vh - 140px))',
+            height: screen === 'dashboard' ? 'min(1000px, calc(100vh - 140px))' : screen === 'profile' ? 'min(1200px, calc(100vh - 140px))' : 'min(844px, calc(100vh - 140px))',
             borderRadius: 44,
             background: '#0F1217',
             border: '1px solid #1E2330',
@@ -195,7 +195,7 @@ export default function App() {
           {allScreens.map((s) => {
             const hasStatusBar = !['splash', 'scanner', 'processing'].includes(s)
             const hasBottomNav = mainNav.includes(s)
-            const screenHeight = s === 'dashboard' ? 'h-[1000px]' : s === 'profile' ? 'h-[1300px]' : 'h-[844px]'
+            const screenHeight = s === 'dashboard' ? 'h-[1000px]' : s === 'profile' ? 'h-[1200px]' : 'h-[844px]'
             return (
               <div key={s} className="flex flex-col items-center">
                 {/* Screen Header Label */}
