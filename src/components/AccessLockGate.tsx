@@ -182,9 +182,9 @@ export default function AccessLockGate({ onUnlock }: Props) {
           <p className="font-mono text-[9px] text-center" style={{ color: '#4B5563', fontFamily: "'JetBrains Mono', monospace" }}>
             AUTHORIZED PERSONNEL ONLY
           </p>
-          <p className="font-mono text-[10px] text-center flex items-center gap-1.5" style={{ color: '#8B929E', fontFamily: "'JetBrains Mono', monospace" }}>
+          <p className="font-mono text-[9px] text-center flex items-center gap-1.5 opacity-25 transition-opacity hover:opacity-100" style={{ color: '#FFFFFF', fontFamily: "'JetBrains Mono', monospace" }}>
             <span>Developer:</span>
-            <a href="mailto:robiulsunyemon@gmail.com" className="transition-colors hover:text-[#D4AF37] underline underline-offset-2" style={{ color: '#D4AF37' }}>
+            <a href="mailto:robiulsunyemon@gmail.com" className="hover:underline">
               robiulsunyemon@gmail.com
             </a>
           </p>
