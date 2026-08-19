@@ -190,8 +190,8 @@ export default function App() {
           </div>
         </div>
       ) : (
-        /* Mode 2: All Screens Grid Showcase Mode (Single Page, All Screens Side-by-Side) */
-        <div className="w-full max-w-[1700px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8 py-4 justify-items-center items-start">
+        /* Mode 2: All Screens Grid Showcase Mode (Single Page, 2 Screens Per Row) */
+        <div className="w-full max-w-[900px] grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 py-4 justify-items-center items-start">
           {allScreens.map((s) => {
             const hasStatusBar = !['splash', 'scanner', 'processing'].includes(s)
             const hasBottomNav = mainNav.includes(s)
