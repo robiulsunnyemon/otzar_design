@@ -1,4 +1,5 @@
 {
+  "title": "Otzar App - Pocket Geologist",
   "description": "Empowering exploration geologists and miners, this AI-driven app enables offline mineral identification, logging, and geospatial mapping in remote areas.",
   "robots": {
     "index": false
