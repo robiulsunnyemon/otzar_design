@@ -1,7 +1,7 @@
 export default function StatusBar() {
   return (
     <div
-      className="w-full h-full flex items-center justify-between px-7 text-[12px] font-semibold select-none z-30"
+      className="w-full h-full flex items-center justify-between px-7 pt-3.5 pb-2.5 text-[12px] font-semibold select-none z-30"
       style={{ color: '#F8FAFC', fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', sans-serif" }}
     >
       {/* Left: Time */}

@@ -168,7 +168,7 @@ export default function App() {
           }}
         >
           {/* Top Mobile Status Bar (9:41, Dynamic Island, Cellular, WiFi, Battery) */}
-          <div className="relative w-full h-[44px] flex-shrink-0 z-30 bg-[#0F1217]">
+          <div className="relative w-full h-[48px] flex-shrink-0 z-30 bg-[#0F1217]">
             <StatusBar />
           </div>
 
@@ -211,7 +211,7 @@ export default function App() {
                   }}
                 >
                   {/* Top Mobile Status Bar (9:41, Dynamic Island, Cellular, WiFi, Battery) */}
-                  <div className="relative w-full h-[44px] flex-shrink-0 z-30 bg-[#0F1217]">
+                  <div className="relative w-full h-[48px] flex-shrink-0 z-30 bg-[#0F1217]">
                     <StatusBar />
                   </div>
 
