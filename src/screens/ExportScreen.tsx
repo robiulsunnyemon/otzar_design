@@ -66,7 +66,7 @@ export default function ExportScreen({ navigate: _navigate }: ScreenProps) {
   }
 
   return (
-    <div className="absolute inset-0 flex flex-col no-scrollbar pt-6" style={{ background: '#0F1217', overflowY: 'auto' }}>
+    <div className="absolute inset-0 flex flex-col no-scrollbar pt-3" style={{ background: '#0F1217', overflowY: 'auto' }}>
       {/* Report preview card */}
       <div
         className="mx-4 mb-4 rounded-3xl p-5 relative overflow-hidden"

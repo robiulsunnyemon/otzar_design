@@ -15,7 +15,7 @@ export default function LoggingScreen({ navigate }: ScreenProps) {
   }
 
   return (
-    <div className="absolute inset-0 flex flex-col no-scrollbar pt-6" style={{ background: '#0F1217', overflowY: 'auto' }}>
+    <div className="absolute inset-0 flex flex-col no-scrollbar pt-3" style={{ background: '#0F1217', overflowY: 'auto' }}>
       {/* Photo gallery */}
       <div className="mx-4 mb-4">
         <div className="font-mono text-[10px] mb-2" style={{ color: '#8B929E', fontFamily: "'JetBrains Mono', monospace", letterSpacing: '0.1em' }}>

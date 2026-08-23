@@ -26,7 +26,7 @@ export default function SyncScreen({ navigate: _navigate }: ScreenProps) {
   return (
     <div className="absolute inset-0 flex flex-col no-scrollbar" style={{ background: '#0F1217', overflowY: 'auto' }}>
       {/* Header */}
-      <div className="px-5 pt-6 pb-3 flex items-center justify-between">
+      <div className="px-5 pt-3 pb-3 flex items-center justify-between">
         <div className="font-display text-lg font-bold" style={{ fontFamily: "'Space Grotesk', sans-serif", color: '#F8FAFC' }}>
           Sync Engine
         </div>

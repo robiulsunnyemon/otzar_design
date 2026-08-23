@@ -46,7 +46,7 @@ export default function ProfileScreen({ navigate }: ScreenProps) {
     <div className="absolute inset-0 flex flex-col no-scrollbar" style={{ background: '#0F1217', overflowY: 'auto' }}>
       {/* Profile header */}
       <div
-        className="mx-4 mt-6 mb-4 rounded-3xl p-5"
+        className="mx-4 mt-2 mb-4 rounded-3xl p-5"
         style={{ background: 'linear-gradient(145deg, #181C24, #1E2330)', border: '1px solid rgba(212,175,55,0.15)' }}
       >
         <div className="flex items-center gap-4 mb-4">

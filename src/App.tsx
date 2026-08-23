@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import type { ScreenId } from './types'
+import StatusBar from './components/StatusBar'
 import BottomNav from './components/BottomNav'
 import HelpCenterModal from './components/HelpCenterModal'
 import SplashScreen from './screens/SplashScreen'
@@ -166,8 +167,13 @@ export default function App() {
             boxShadow: '0 0 0 1px rgba(212,175,55,0.08), 0 32px 80px rgba(0,0,0,0.7), 0 0 60px rgba(212,175,55,0.05)',
           }}
         >
+          {/* Top Mobile Status Bar (9:41, Dynamic Island, Cellular, WiFi, Battery) */}
+          <div className="relative w-full h-[44px] flex-shrink-0 z-30 bg-[#0F1217]">
+            <StatusBar />
+          </div>
+
           {/* Screen Content Viewport */}
-          <div className="relative w-full flex-1 overflow-hidden" style={{ borderRadius: 44 }}>
+          <div className="relative w-full flex-1 overflow-hidden" style={{ borderRadius: '0 0 44px 44px' }}>
             <div className="h-full relative overflow-y-auto no-scrollbar">
               {renderScreen(screen)}
             </div>
@@ -204,8 +210,13 @@ export default function App() {
                     boxShadow: '0 20px 50px rgba(0,0,0,0.8), 0 0 30px rgba(212,175,55,0.05)',
                   }}
                 >
+                  {/* Top Mobile Status Bar (9:41, Dynamic Island, Cellular, WiFi, Battery) */}
+                  <div className="relative w-full h-[44px] flex-shrink-0 z-30 bg-[#0F1217]">
+                    <StatusBar />
+                  </div>
+
                   {/* Screen Content Viewport */}
-                  <div className="relative w-full flex-1 overflow-hidden" style={{ borderRadius: 40 }}>
+                  <div className="relative w-full flex-1 overflow-hidden" style={{ borderRadius: '0 0 40px 40px' }}>
                     <div className="h-full relative overflow-y-auto no-scrollbar">
                       {renderScreen(s)}
                     </div>

@@ -34,7 +34,7 @@ export default function FieldTestScreen({ navigate }: ScreenProps) {
   const nearest = mohsRef.reduce((a, b) => Math.abs(b.val - mohs) < Math.abs(a.val - mohs) ? b : a)
 
   return (
-    <div className="absolute inset-0 flex flex-col no-scrollbar pt-6" style={{ background: '#0F1217', overflowY: 'auto' }}>
+    <div className="absolute inset-0 flex flex-col no-scrollbar pt-3" style={{ background: '#0F1217', overflowY: 'auto' }}>
       {/* Confidence boost indicator */}
       <div
         className="mx-4 mb-4 rounded-2xl px-4 py-3 flex items-center justify-between"

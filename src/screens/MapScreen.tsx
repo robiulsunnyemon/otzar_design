@@ -17,7 +17,7 @@ export default function MapScreen({ navigate: _navigate }: ScreenProps) {
   return (
     <div className="absolute inset-0 flex flex-col" style={{ background: '#0F1217' }}>
       {/* Header */}
-      <div className="px-5 pt-6 pb-2 flex items-center justify-between z-10 relative">
+      <div className="px-5 pt-2 pb-2 flex items-center justify-between z-10 relative">
         <div className="font-display text-lg font-bold" style={{ fontFamily: "'Space Grotesk', sans-serif", color: '#F8FAFC' }}>
           GIS Claim Map
         </div>

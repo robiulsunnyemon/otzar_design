@@ -55,7 +55,7 @@ export default function HelpScreen({ navigate }: ScreenProps) {
   }
 
   return (
-    <div className="absolute inset-0 flex flex-col no-scrollbar pt-6" style={{ background: '#0F1217', overflowY: 'auto' }}>
+    <div className="absolute inset-0 flex flex-col no-scrollbar pt-3" style={{ background: '#0F1217', overflowY: 'auto' }}>
       {/* Tabs */}
       <div className="flex mx-4 mt-1 rounded-2xl p-1 gap-1" style={{ background: '#181C24', border: '1px solid #1E2330' }}>
         {[

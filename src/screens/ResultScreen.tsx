@@ -36,7 +36,7 @@ function ConfidenceGauge({ value }: { value: number }) {
 
 export default function ResultScreen({ navigate }: ScreenProps) {
   return (
-    <div className="absolute inset-0 flex flex-col no-scrollbar pt-6" style={{ background: '#0F1217', overflowY: 'auto' }}>
+    <div className="absolute inset-0 flex flex-col no-scrollbar pt-3" style={{ background: '#0F1217', overflowY: 'auto' }}>
       {/* Hero ID */}
       <div className="mx-4 mb-4 rounded-3xl p-5" style={{ background: 'linear-gradient(145deg, #181C24, #1E2330)', border: '1px solid rgba(212,175,55,0.15)' }}>
         <div className="flex items-start gap-4">
