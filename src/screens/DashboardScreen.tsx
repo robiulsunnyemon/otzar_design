@@ -13,8 +13,11 @@ export default function DashboardScreen({ navigate }: ScreenProps) {
       {/* Header */}
       <div className="px-5 pt-2 pb-3 flex items-center justify-between">
         <div>
-          <div className="font-display text-[11px] font-medium mb-0.5" style={{ fontFamily: "'Space Grotesk', sans-serif", color: '#8B929E', letterSpacing: '0.1em' }}>
-            COMMAND CENTER
+          <div className="flex items-center gap-1.5 mb-0.5">
+            <img src="/logo.png" alt="OTZAR APP Logo" className="w-4 h-4 object-contain drop-shadow-[0_0_6px_rgba(212,175,55,0.4)]" />
+            <div className="font-display text-[11px] font-bold" style={{ fontFamily: "'Space Grotesk', sans-serif", color: '#D4AF37', letterSpacing: '0.1em' }}>
+              OTZAR APP · COMMAND CENTER
+            </div>
           </div>
           <div className="font-display text-lg font-bold" style={{ fontFamily: "'Space Grotesk', sans-serif", color: '#F8FAFC' }}>
             Good afternoon, Dr. Osei
@@ -81,7 +84,7 @@ export default function DashboardScreen({ navigate }: ScreenProps) {
             INITIATE SCAN
           </span>
           <span className="font-mono text-[10px]" style={{ color: '#8B929E', fontFamily: "'JetBrains Mono', monospace" }}>
-            AI MINERAL IDENTIFICATION · OFFLINE READY
+            OTZAR APP AI MINERAL IDENTIFICATION · OFFLINE READY
           </span>
         </button>
       </div>

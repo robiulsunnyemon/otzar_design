@@ -4,7 +4,10 @@ export default function StatusBar() {
       className="w-full h-full flex items-center justify-between px-6 font-mono text-[10px]"
       style={{ color: '#8B929E', fontFamily: "'JetBrains Mono', monospace" }}
     >
-      <span style={{ color: '#D4AF37', fontWeight: 600 }}>9:41</span>
+      <div className="flex items-center gap-1.5">
+        <img src="/logo.png" alt="OTZAR APP" className="w-4 h-4 object-contain drop-shadow-[0_0_6px_rgba(212,175,55,0.4)]" />
+        <span style={{ color: '#D4AF37', fontWeight: 700, letterSpacing: '0.05em' }}>OTZAR APP</span>
+      </div>
       <div className="flex items-center gap-2">
         <span style={{ color: '#00C853' }}>GPS ±2.8m</span>
         <svg width="14" height="10" viewBox="0 0 14 10" fill="none">

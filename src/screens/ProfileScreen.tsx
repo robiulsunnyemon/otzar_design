@@ -164,8 +164,8 @@ export default function ProfileScreen({ navigate }: ScreenProps) {
 
       {/* App info */}
       <div className="mx-4 mb-24 text-center">
-        <div className="font-mono text-[8px]" style={{ color: '#252B3A', fontFamily: "'JetBrains Mono', monospace" }}>
-          OTZAR v2.4.1 · BUILD 2026.08 · NEURAL ENGINE v4.2 · AES-256 ENCRYPTED
+        <div className="font-mono text-[8px]" style={{ color: '#4B5563', fontFamily: "'JetBrains Mono', monospace" }}>
+          OTZAR APP v2.4.1 · BUILD 2026.08 · NEURAL ENGINE v4.2 · AES-256 ENCRYPTED
         </div>
       </div>
     </div>

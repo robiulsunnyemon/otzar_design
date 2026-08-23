@@ -84,7 +84,7 @@ export default function ExportScreen({ navigate: _navigate }: ScreenProps) {
       >
         <div className="absolute animate-shimmer inset-0 rounded-3xl pointer-events-none" />
         <div className="font-mono text-[10px] mb-2" style={{ color: '#D4AF37', fontFamily: "'JetBrains Mono', monospace", letterSpacing: '0.12em' }}>
-          OTZAR FIELD REPORT
+          OTZAR APP FIELD REPORT
         </div>
         <div className="font-display text-base font-bold mb-1" style={{ fontFamily: "'Space Grotesk', sans-serif", color: '#F8FAFC' }}>
           Zambia Copperbelt Survey

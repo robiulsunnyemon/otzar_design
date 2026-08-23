@@ -69,12 +69,18 @@ export default function ProcessingScreen({ navigate }: ScreenProps) {
         </div>
       </div>
 
+      {/* Top Logo Badge */}
+      <div className="flex items-center gap-1.5 mb-6 px-3 py-1 rounded-full" style={{ background: '#181C24', border: '1px solid rgba(212,175,55,0.2)' }}>
+        <img src="/logo.png" alt="OTZAR APP Logo" className="w-4 h-4 object-contain drop-shadow-[0_0_6px_rgba(212,175,55,0.4)]" />
+        <span className="font-mono text-[9px] font-bold" style={{ color: '#D4AF37', fontFamily: "'JetBrains Mono', monospace" }}>OTZAR APP NEURAL ENGINE</span>
+      </div>
+
       {/* Label */}
-      <div className="font-display text-sm font-semibold mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif", color: '#F8FAFC' }}>
+      <div className="font-display text-sm font-semibold mb-1" style={{ fontFamily: "'Space Grotesk', sans-serif", color: '#F8FAFC' }}>
         Neural Analysis in Progress
       </div>
       <div className="font-mono text-[10px] mb-6" style={{ color: '#8B929E', fontFamily: "'JetBrains Mono', monospace" }}>
-        ON-DEVICE INFERENCE · OFFLINE MODE
+        OTZAR APP ON-DEVICE INFERENCE · OFFLINE MODE
       </div>
 
       {/* Progress bar */}

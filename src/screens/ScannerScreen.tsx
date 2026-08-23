@@ -42,7 +42,7 @@ export default function ScannerScreen({ navigate }: ScreenProps) {
         )}
 
         {/* HUD overlays — top */}
-        <div className="absolute top-0 left-0 right-0 flex justify-between px-4 pt-4 animate-hud-flicker">
+        <div className="absolute top-0 left-0 right-0 flex items-center justify-between px-4 pt-4 animate-hud-flicker">
           <div className="flex flex-col gap-1">
             <div className="font-mono text-[9px]" style={{ color: '#00E5FF', fontFamily: "'JetBrains Mono', monospace" }}>
               ELV  1,247m
@@ -50,6 +50,10 @@ export default function ScannerScreen({ navigate }: ScreenProps) {
             <div className="font-mono text-[9px]" style={{ color: '#00E5FF', fontFamily: "'JetBrains Mono', monospace" }}>
               BRG  N 042°
             </div>
+          </div>
+          <div className="flex items-center gap-1.5 px-2 py-1 rounded-lg" style={{ background: 'rgba(15,18,23,0.7)', border: '1px solid rgba(212,175,55,0.3)' }}>
+            <img src="/logo.png" alt="OTZAR APP" className="w-3.5 h-3.5 object-contain" />
+            <span className="font-mono text-[8px] font-bold" style={{ color: '#D4AF37', fontFamily: "'JetBrains Mono', monospace" }}>OTZAR APP HUD</span>
           </div>
           <div className="flex flex-col items-end gap-1">
             <div className="font-mono text-[9px]" style={{ color: '#00E5FF', fontFamily: "'JetBrains Mono', monospace" }}>

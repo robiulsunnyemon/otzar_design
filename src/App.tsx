@@ -3,6 +3,7 @@ import type { ScreenId } from './types'
 import StatusBar from './components/StatusBar'
 import BottomNav from './components/BottomNav'
 import AccessLockGate from './components/AccessLockGate'
+import HelpCenterModal from './components/HelpCenterModal'
 import SplashScreen from './screens/SplashScreen'
 import OnboardingScreen from './screens/OnboardingScreen'
 import PinScreen from './screens/PinScreen'
@@ -38,6 +39,7 @@ export default function App() {
   const [screen, setScreen] = useState<ScreenId>('splash')
   const [navOpen, setNavOpen] = useState(false)
   const [viewMode, setViewMode] = useState<'simulator' | 'grid'>('grid')
+  const [helpCenterOpen, setHelpCenterOpen] = useState(false)
 
   if (!unlocked) {
     return <AccessLockGate onUnlock={() => setUnlocked(true)} />
@@ -98,6 +100,21 @@ export default function App() {
             🎛️ ALL SCREENS GRID (SHOWCASE)
           </button>
         </div>
+
+        {/* Help Center Button */}
+        <button
+          onClick={() => setHelpCenterOpen(true)}
+          className="px-3.5 py-2 rounded-xl font-mono text-[10px] font-bold transition-all hover:scale-105 flex items-center gap-1.5"
+          style={{
+            fontFamily: "'JetBrains Mono', monospace",
+            background: 'linear-gradient(135deg, rgba(212,175,55,0.2), rgba(0,229,255,0.15))',
+            color: '#D4AF37',
+            border: '1px solid rgba(212,175,55,0.4)',
+            boxShadow: '0 0 15px rgba(212,175,55,0.1)',
+          }}
+        >
+          <span>🤖</span> HELP CENTER & AI SUPPORT
+        </button>
 
         {/* Lock Gate Action Button */}
         <button
@@ -243,9 +260,12 @@ export default function App() {
         </div>
       )}
 
+      {/* Help Center Modal Component */}
+      <HelpCenterModal isOpen={helpCenterOpen} onClose={() => setHelpCenterOpen(false)} />
+
       {/* Tagline below */}
-      <div className="mt-8 font-mono text-[9px] text-center" style={{ color: '#252B3A', fontFamily: "'JetBrains Mono', monospace", letterSpacing: '0.15em' }}>
-        OTZAR · A POCKET GEOLOGIST FOR THE MODERN MINER · v2.4.1
+      <div className="mt-8 font-mono text-[9px] text-center" style={{ color: '#8B929E', fontFamily: "'JetBrains Mono', monospace", letterSpacing: '0.15em' }}>
+        OTZAR APP · A POCKET GEOLOGIST FOR THE MODERN MINER · v2.4.1
       </div>
     </div>
   )

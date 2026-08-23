@@ -28,17 +28,14 @@ export default function PinScreen({ navigate }: ScreenProps) {
     >
       {/* Header */}
       <div className="flex flex-col items-center pt-10 pb-8">
-        <div className="w-12 h-12 rounded-2xl flex items-center justify-center mb-4" style={{ background: 'rgba(212,175,55,0.1)', border: '1px solid rgba(212,175,55,0.2)' }}>
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-            <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-            <path d="M7 11V7a5 5 0 0110 0v4" />
-          </svg>
+        <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-4" style={{ background: 'rgba(212,175,55,0.1)', border: '1px solid rgba(212,175,55,0.25)' }}>
+          <img src="/logo.png" alt="OTZAR APP Logo" className="w-9 h-9 object-contain drop-shadow-[0_0_8px_rgba(212,175,55,0.5)]" />
         </div>
         <div className="font-display text-base font-semibold mb-1" style={{ fontFamily: "'Space Grotesk', sans-serif", color: '#F8FAFC' }}>
           FIELD ACCESS
         </div>
         <div className="font-mono text-[10px]" style={{ color: '#8B929E', fontFamily: "'JetBrains Mono', monospace", letterSpacing: '0.12em' }}>
-          OTZAR GEOLOGICAL SYSTEM — SECURE LOGIN
+          OTZAR APP GEOLOGICAL SYSTEM — SECURE LOGIN
         </div>
       </div>
 

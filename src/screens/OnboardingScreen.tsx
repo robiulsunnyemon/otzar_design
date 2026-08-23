@@ -17,8 +17,8 @@ const slides = [
       </svg>
     ),
     tag: 'AI VISION CORE',
-    title: 'Sub-Second Mineral Identification',
-    desc: 'Point. Capture. Identify. Our on-device neural engine analyzes luster, cleavage, and crystal structure from multi-angle fracture scans — no network required.',
+    title: 'Instant Mineral Identification',
+    desc: 'Point. Capture. Identify. Our on-device AI analyzes luster, cleavage, and crystal structure from multiple angles—delivering fast, reliable results without an internet connection.',
   },
   {
     icon: (
@@ -68,11 +68,17 @@ export default function OnboardingScreen({ navigate }: ScreenProps) {
 
   return (
     <div className="absolute inset-0 flex flex-col" style={{ background: '#0F1217' }}>
-      {/* Skip */}
-      <div className="flex justify-end px-6 pt-2 pb-4">
+      {/* Header bar with small logo & Skip */}
+      <div className="flex items-center justify-between px-6 pt-2 pb-3">
+        <div className="flex items-center gap-1.5">
+          <img src="/logo.png" alt="OTZAR APP" className="w-5 h-5 object-contain drop-shadow-[0_0_6px_rgba(212,175,55,0.4)]" />
+          <span className="font-display text-xs font-bold" style={{ fontFamily: "'Space Grotesk', sans-serif", color: '#D4AF37', letterSpacing: '0.05em' }}>
+            OTZAR APP
+          </span>
+        </div>
         <button
           onClick={() => navigate('pin')}
-          className="font-mono text-[11px] font-medium"
+          className="font-mono text-[11px] font-medium transition-colors hover:text-[#D4AF37]"
           style={{ color: '#8B929E', fontFamily: "'JetBrains Mono', monospace" }}
         >
           SKIP →

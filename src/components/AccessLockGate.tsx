@@ -74,23 +74,20 @@ export default function AccessLockGate({ onUnlock }: Props) {
             : '0 0 50px rgba(212,175,55,0.15), 0 20px 50px rgba(0,0,0,0.8)',
         }}
       >
-        {/* Security Shield Icon */}
+        {/* Security Shield / Official Logo */}
         <div
-          className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-lg transition-transform hover:scale-105"
+          className="w-20 h-20 rounded-3xl flex items-center justify-center mb-5 shadow-lg transition-transform hover:scale-105"
           style={{
             background: 'linear-gradient(135deg, rgba(212,175,55,0.2), rgba(212,175,55,0.05))',
             border: '1px solid rgba(212,175,55,0.4)',
           }}
         >
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-          </svg>
+          <img src="/logo.png" alt="OTZAR APP Logo" className="w-14 h-14 object-contain drop-shadow-[0_0_12px_rgba(212,175,55,0.6)]" />
         </div>
 
         {/* Title */}
         <h2 className="font-display text-xl font-bold tracking-wide text-center mb-1" style={{ color: '#F8FAFC', fontFamily: "'Space Grotesk', sans-serif" }}>
-          OTZAR PROTOCOL LOCK
+          OTZAR APP PROTOCOL LOCK
         </h2>
         <p className="font-mono text-[11px] text-center mb-6" style={{ color: '#8B929E', fontFamily: "'JetBrains Mono', monospace" }}>
           Client Prototype Design Review Gate
