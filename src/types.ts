@@ -13,6 +13,7 @@ export type ScreenId =
   | 'sync'
   | 'export'
   | 'profile'
+  | 'help'
 
 export interface ScreenProps {
   navigate: (s: ScreenId) => void

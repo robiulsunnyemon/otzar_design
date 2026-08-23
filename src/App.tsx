@@ -18,6 +18,7 @@ import MapScreen from './screens/MapScreen'
 import SyncScreen from './screens/SyncScreen'
 import ExportScreen from './screens/ExportScreen'
 import ProfileScreen from './screens/ProfileScreen'
+import HelpScreen from './screens/HelpScreen'
 
 const mainNav: ScreenId[] = ['dashboard', 'catalog', 'map', 'sync', 'profile']
 
@@ -26,12 +27,12 @@ const screenLabels: Record<ScreenId, string> = {
   dashboard: '04 Dashboard', scanner: '05 AI Scanner', processing: '06 Processing HUD',
   result: '07 ID Result', fieldtest: '08 Field Test', logging: '09 Discovery Log',
   catalog: '10 Vault', map: '11 GIS Map', sync: '12 Sync Engine',
-  export: '13 Export Hub', profile: '14 Profile',
+  export: '13 Export Hub', profile: '14 Profile', help: '15 Help Center',
 }
 
 const allScreens: ScreenId[] = [
   'splash', 'onboarding', 'pin', 'dashboard', 'scanner', 'processing',
-  'result', 'fieldtest', 'logging', 'catalog', 'map', 'sync', 'export', 'profile',
+  'result', 'fieldtest', 'logging', 'catalog', 'map', 'sync', 'export', 'profile', 'help',
 ]
 
 export default function App() {
@@ -65,6 +66,7 @@ export default function App() {
       case 'sync': return <SyncScreen navigate={navigate} />
       case 'export': return <ExportScreen navigate={navigate} />
       case 'profile': return <ProfileScreen navigate={navigate} />
+      case 'help': return <HelpScreen navigate={navigate} />
     }
   }
 

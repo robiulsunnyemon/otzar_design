@@ -33,6 +33,13 @@ export default function ProfileScreen({ navigate }: ScreenProps) {
         { label: 'API Integration', desc: 'ArcGIS Enterprise · Connected', nav: true, icon: '🔗' },
       ],
     },
+    {
+      group: 'SUPPORT & AI DESK',
+      items: [
+        { label: 'Help Center & AI Geologist', desc: 'AI assistant & live representative desk', nav: true, icon: '🤖', action: () => navigate('help') },
+        { label: 'Field Safety & Hotlines', desc: 'Emergency dispatch & safety guidelines', nav: true, icon: '🛡' },
+      ],
+    },
   ]
 
   return (
@@ -114,7 +121,8 @@ export default function ProfileScreen({ navigate }: ScreenProps) {
             {group.items.map((item, i) => (
               <div
                 key={item.label}
-                className="flex items-center gap-3 px-4 py-3"
+                onClick={'action' in item && item.action ? item.action : undefined}
+                className={`flex items-center gap-3 px-4 py-3 ${'action' in item && item.action ? 'cursor-pointer transition-colors hover:bg-[#202532]' : ''}`}
                 style={{
                   background: '#181C24',
                   borderBottom: i < group.items.length - 1 ? '1px solid #1E2330' : 'none',

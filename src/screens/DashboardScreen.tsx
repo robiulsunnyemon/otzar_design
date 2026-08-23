@@ -162,19 +162,20 @@ export default function DashboardScreen({ navigate }: ScreenProps) {
       </div>
 
       {/* Quick actions */}
-      <div className="mx-4 mb-24 grid grid-cols-2 gap-2">
+      <div className="mx-4 mb-24 grid grid-cols-3 gap-2">
         {[
           { label: 'GIS Map', icon: '🗺', screen: 'map' as const },
           { label: 'Field Log', icon: '📋', screen: 'logging' as const },
+          { label: 'AI Help', icon: '🤖', screen: 'help' as const },
         ].map((a) => (
           <button
             key={a.label}
             onClick={() => navigate(a.screen)}
-            className="flex items-center gap-3 px-4 py-3 rounded-2xl transition-all active:scale-95"
+            className="flex flex-col items-center justify-center gap-1.5 py-3 rounded-2xl transition-all active:scale-95 text-center"
             style={{ background: '#181C24', border: '1px solid #1E2330' }}
           >
             <span style={{ fontSize: 20 }}>{a.icon}</span>
-            <span className="font-display font-medium text-sm" style={{ fontFamily: "'Space Grotesk', sans-serif", color: '#F8FAFC' }}>
+            <span className="font-display font-medium text-xs" style={{ fontFamily: "'Space Grotesk', sans-serif", color: '#F8FAFC' }}>
               {a.label}
             </span>
           </button>
