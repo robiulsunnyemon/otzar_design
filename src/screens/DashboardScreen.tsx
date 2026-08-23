@@ -11,7 +11,7 @@ export default function DashboardScreen({ navigate }: ScreenProps) {
   return (
     <div className="absolute inset-0 flex flex-col no-scrollbar" style={{ background: '#0F1217', overflowY: 'auto' }}>
       {/* Header */}
-      <div className="px-5 pt-2 pb-3 flex items-center justify-between">
+      <div className="px-5 pt-6 pb-3 flex items-center justify-between">
         <div>
           <div className="flex items-center gap-1.5 mb-0.5">
             <img src="/logo.png" alt="OTZAR APP Logo" className="w-4 h-4 object-contain drop-shadow-[0_0_6px_rgba(212,175,55,0.4)]" />

@@ -66,17 +66,7 @@ export default function ExportScreen({ navigate: _navigate }: ScreenProps) {
   }
 
   return (
-    <div className="absolute inset-0 flex flex-col no-scrollbar" style={{ background: '#0F1217', overflowY: 'auto' }}>
-      {/* Header */}
-      <div className="px-5 pt-2 pb-3 flex items-center justify-between">
-        <div className="font-display text-lg font-bold" style={{ fontFamily: "'Space Grotesk', sans-serif", color: '#F8FAFC' }}>
-          Export Hub
-        </div>
-        <div className="font-mono text-[9px]" style={{ color: '#00C853', fontFamily: "'JetBrains Mono', monospace" }}>
-          6 SPECIMENS
-        </div>
-      </div>
-
+    <div className="absolute inset-0 flex flex-col no-scrollbar pt-6" style={{ background: '#0F1217', overflowY: 'auto' }}>
       {/* Report preview card */}
       <div
         className="mx-4 mb-4 rounded-3xl p-5 relative overflow-hidden"

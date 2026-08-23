@@ -34,20 +34,7 @@ export default function FieldTestScreen({ navigate }: ScreenProps) {
   const nearest = mohsRef.reduce((a, b) => Math.abs(b.val - mohs) < Math.abs(a.val - mohs) ? b : a)
 
   return (
-    <div className="absolute inset-0 flex flex-col no-scrollbar" style={{ background: '#0F1217', overflowY: 'auto' }}>
-      {/* Header */}
-      <div className="flex items-center justify-between px-5 py-3 mb-2">
-        <button onClick={() => navigate('result')} style={{ color: '#8B929E' }}>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
-            <path d="M19 12H5M12 5l-7 7 7 7" />
-          </svg>
-        </button>
-        <span className="font-mono text-[10px]" style={{ color: '#8B929E', fontFamily: "'JetBrains Mono', monospace", letterSpacing: '0.1em' }}>
-          FIELD TEST REFINEMENT
-        </span>
-        <div className="w-5" />
-      </div>
-
+    <div className="absolute inset-0 flex flex-col no-scrollbar pt-6" style={{ background: '#0F1217', overflowY: 'auto' }}>
       {/* Confidence boost indicator */}
       <div
         className="mx-4 mb-4 rounded-2xl px-4 py-3 flex items-center justify-between"

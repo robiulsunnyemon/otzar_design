@@ -55,42 +55,9 @@ export default function HelpScreen({ navigate }: ScreenProps) {
   }
 
   return (
-    <div className="absolute inset-0 flex flex-col no-scrollbar" style={{ background: '#0F1217', overflowY: 'auto' }}>
-      {/* Header */}
-      <div className="px-5 pt-2 pb-3 flex items-center justify-between border-b" style={{ borderColor: '#1E2330' }}>
-        <div className="flex items-center gap-2">
-          <button
-            onClick={() => navigate('dashboard')}
-            className="w-8 h-8 rounded-xl flex items-center justify-center transition-all active:scale-95"
-            style={{ background: '#181C24', border: '1px solid #1E2330' }}
-          >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8B929E" strokeWidth="2" strokeLinecap="round">
-              <path d="M19 12H5M12 5l-7 7 7 7" />
-            </svg>
-          </button>
-          <div>
-            <div className="flex items-center gap-1.5 mb-0.5">
-              <img src="/logo.png" alt="OTZAR APP Logo" className="w-4 h-4 object-contain drop-shadow-[0_0_6px_rgba(212,175,55,0.4)]" />
-              <div className="font-display text-[10px] font-bold" style={{ fontFamily: "'Space Grotesk', sans-serif", color: '#D4AF37', letterSpacing: '0.08em' }}>
-                OTZAR APP SUPPORT
-              </div>
-            </div>
-            <div className="font-display text-base font-bold" style={{ fontFamily: "'Space Grotesk', sans-serif", color: '#F8FAFC' }}>
-              Help Center & AI
-            </div>
-          </div>
-        </div>
-
-        <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full" style={{ background: 'rgba(0,200,83,0.1)', border: '1px solid rgba(0,200,83,0.25)' }}>
-          <div className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: '#00C853' }} />
-          <span className="font-mono text-[8px] font-bold" style={{ color: '#00C853', fontFamily: "'JetBrains Mono', monospace" }}>
-            24/7 ONLINE
-          </span>
-        </div>
-      </div>
-
+    <div className="absolute inset-0 flex flex-col no-scrollbar pt-6" style={{ background: '#0F1217', overflowY: 'auto' }}>
       {/* Tabs */}
-      <div className="flex mx-4 mt-3 rounded-2xl p-1 gap-1" style={{ background: '#181C24', border: '1px solid #1E2330' }}>
+      <div className="flex mx-4 mt-1 rounded-2xl p-1 gap-1" style={{ background: '#181C24', border: '1px solid #1E2330' }}>
         {[
           { id: 'ai' as const, label: '🤖 AI Assistant', color: '#D4AF37' },
           { id: 'live' as const, label: '👨‍💼 Live Agent', color: '#00E5FF' },

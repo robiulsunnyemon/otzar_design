@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import type { ScreenId } from './types'
-import StatusBar from './components/StatusBar'
 import BottomNav from './components/BottomNav'
 import HelpCenterModal from './components/HelpCenterModal'
 import SplashScreen from './screens/SplashScreen'
@@ -41,7 +40,6 @@ export default function App() {
   const [helpCenterOpen, setHelpCenterOpen] = useState(false)
 
   const navigate = (s: ScreenId) => { setScreen(s); setNavOpen(false) }
-  const showStatusBar = !['splash', 'scanner', 'processing'].includes(screen)
   const showBottomNav = mainNav.includes(screen)
 
   const renderScreen = (s: ScreenId) => {
@@ -168,17 +166,8 @@ export default function App() {
             boxShadow: '0 0 0 1px rgba(212,175,55,0.08), 0 32px 80px rgba(0,0,0,0.7), 0 0 60px rgba(212,175,55,0.05)',
           }}
         >
-          {/* Top 50px Safe Area (Notch & Status Bar ONLY) */}
-          <div className="relative w-full h-[50px] flex-shrink-0 z-30 bg-[#0F1217]">
-            <div
-              className="absolute top-0 left-1/2 -translate-x-1/2 z-40 pointer-events-none"
-              style={{ width: 110, height: 28, background: '#000', borderRadius: '0 0 16px 16px' }}
-            />
-            {showStatusBar && <StatusBar />}
-          </div>
-
-          {/* Screen Content Viewport (Starts Strictly BELOW 50px) */}
-          <div className="relative w-full flex-1 overflow-hidden" style={{ borderRadius: '0 0 44px 44px' }}>
+          {/* Screen Content Viewport */}
+          <div className="relative w-full flex-1 overflow-hidden" style={{ borderRadius: 44 }}>
             <div className="h-full relative overflow-y-auto no-scrollbar">
               {renderScreen(screen)}
             </div>
@@ -189,7 +178,6 @@ export default function App() {
         /* Mode 2: All Screens Grid Showcase Mode (Single Page, 2 Screens Per Row) */
         <div className="w-full max-w-[900px] grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 py-4 justify-items-center items-start">
           {allScreens.map((s) => {
-            const hasStatusBar = !['splash', 'scanner', 'processing'].includes(s)
             const hasBottomNav = mainNav.includes(s)
             const screenHeight = s === 'dashboard' ? 'h-[1000px]' : s === 'profile' ? 'h-[1200px]' : 'h-[844px]'
             return (
@@ -216,17 +204,8 @@ export default function App() {
                     boxShadow: '0 20px 50px rgba(0,0,0,0.8), 0 0 30px rgba(212,175,55,0.05)',
                   }}
                 >
-                  {/* Top 50px Safe Area (Notch & Status Bar ONLY) */}
-                  <div className="relative w-full h-[50px] flex-shrink-0 z-30 bg-[#0F1217]">
-                    <div
-                      className="absolute top-0 left-1/2 -translate-x-1/2 z-40 pointer-events-none"
-                      style={{ width: 110, height: 28, background: '#000', borderRadius: '0 0 16px 16px' }}
-                    />
-                    {hasStatusBar && <StatusBar />}
-                  </div>
-
-                  {/* Screen Content Viewport (Starts Strictly BELOW 50px) */}
-                  <div className="relative w-full flex-1 overflow-hidden" style={{ borderRadius: '0 0 40px 40px' }}>
+                  {/* Screen Content Viewport */}
+                  <div className="relative w-full flex-1 overflow-hidden" style={{ borderRadius: 40 }}>
                     <div className="h-full relative overflow-y-auto no-scrollbar">
                       {renderScreen(s)}
                     </div>

@@ -36,24 +36,7 @@ function ConfidenceGauge({ value }: { value: number }) {
 
 export default function ResultScreen({ navigate }: ScreenProps) {
   return (
-    <div className="absolute inset-0 flex flex-col no-scrollbar" style={{ background: '#0F1217', overflowY: 'auto' }}>
-      {/* Header */}
-      <div className="flex items-center justify-between px-5 py-3">
-        <button onClick={() => navigate('scanner')} style={{ color: '#8B929E' }}>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
-            <path d="M19 12H5M12 5l-7 7 7 7" />
-          </svg>
-        </button>
-        <span className="font-mono text-[10px]" style={{ color: '#8B929E', fontFamily: "'JetBrains Mono', monospace", letterSpacing: '0.1em' }}>
-          IDENTIFICATION RESULT
-        </span>
-        <button style={{ color: '#8B929E' }}>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
-            <circle cx="12" cy="12" r="1" /><circle cx="19" cy="12" r="1" /><circle cx="5" cy="12" r="1" />
-          </svg>
-        </button>
-      </div>
-
+    <div className="absolute inset-0 flex flex-col no-scrollbar pt-6" style={{ background: '#0F1217', overflowY: 'auto' }}>
       {/* Hero ID */}
       <div className="mx-4 mb-4 rounded-3xl p-5" style={{ background: 'linear-gradient(145deg, #181C24, #1E2330)', border: '1px solid rgba(212,175,55,0.15)' }}>
         <div className="flex items-start gap-4">

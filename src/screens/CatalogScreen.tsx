@@ -29,7 +29,7 @@ export default function CatalogScreen({ navigate }: ScreenProps) {
   return (
     <div className="absolute inset-0 flex flex-col" style={{ background: '#0F1217' }}>
       {/* Header */}
-      <div className="px-5 pt-2 pb-3 flex items-center justify-between">
+      <div className="px-5 pt-6 pb-3 flex items-center justify-between">
         <div className="font-display text-lg font-bold" style={{ fontFamily: "'Space Grotesk', sans-serif", color: '#F8FAFC' }}>
           Discovery Vault
         </div>
