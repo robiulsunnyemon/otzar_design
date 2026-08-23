@@ -70,11 +70,16 @@ export default function OnboardingScreen({ navigate }: ScreenProps) {
     <div className="absolute inset-0 flex flex-col" style={{ background: '#0F1217' }}>
       {/* Header bar with small logo & Skip */}
       <div className="flex items-center justify-between px-6 pt-2 pb-3">
-        <div className="flex items-center gap-1.5">
-          <img src="/logo.png" alt="OTZAR APP" className="w-5 h-5 object-contain drop-shadow-[0_0_6px_rgba(212,175,55,0.4)]" />
-          <span className="font-display text-xs font-bold" style={{ fontFamily: "'Space Grotesk', sans-serif", color: '#D4AF37', letterSpacing: '0.05em' }}>
-            OTZAR APP
-          </span>
+        <div className="flex items-center gap-2">
+          <img src="/logo.png" alt="OTZAR APP" className="w-6 h-6 object-contain drop-shadow-[0_0_6px_rgba(212,175,55,0.4)]" />
+          <div className="flex flex-col">
+            <span className="font-display text-xs font-bold leading-tight" style={{ fontFamily: "'Space Grotesk', sans-serif", color: '#D4AF37', letterSpacing: '0.05em' }}>
+              OTZAR APP
+            </span>
+            <span className="text-[9px] font-medium leading-tight" style={{ color: '#94A3B8', letterSpacing: '0.02em' }}>
+              Know What You Found
+            </span>
+          </div>
         </div>
         <button
           onClick={() => navigate('pin')}
